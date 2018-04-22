@@ -16,3 +16,21 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+/**
+ * ------------------------------------------------------------------------
+ * Front Routes
+ * ------------------------------------------------------------------------
+ * 
+ */
+Route::group(['prefix' => 'front'], function () {
+	/**
+	 * ------------------------------------------------------------------------
+	 * Account Routes
+	 * ------------------------------------------------------------------------
+	 * 
+	 */
+	Route::group(['prefix' => 'account'], function () {
+		Route::post('/', 'Front\AccountController@store');
+	});
+});
