@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace Manddu\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;
